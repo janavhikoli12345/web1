@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb);
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: #fff;
+      text-shadow: 3px 3px 6px #000;
+      margin-top: 100px;
+      animation: bounce 2s infinite;
+    }
+
+    h2 {
+      font-size: 35px;
+      color: yellow;
+      text-shadow: 2px 2px 5px #000;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px yellow; }
+      to { text-shadow: 0 0 30px red; }
+    }
+
+    /* Balloons */
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background: red;
+      border-radius: 50% 50% 50% 50%;
+      position: absolute;
+      bottom: -100px;
+      animation: float 8s infinite ease-in;
+    }
+
+    .balloon:before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100px;
+      background: #333;
+      top: 80px;
+      left: 29px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-800px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Birthday 🎂</h1>
+  <h2>To My Sweet Little Brother 🎉</h2>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left:10%; background:blue;"></div>
+  <div class="balloon" style="left:30%; background:green;"></div>
+  <div class="balloon" style="left:50%; background:purple;"></div>
+  <div class="balloon" style="left:70%; background:orange;"></div>
+  <div class="balloon" style="left:90%; background:yellow;"></div>
+
+</body>
+</html>
